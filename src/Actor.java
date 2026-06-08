@@ -24,13 +24,17 @@ public class Actor extends Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Actor actor = (Actor) o;
+        // Устранение замечания: Лучше включить gender в сравнение и в hashCode()
         return height == actor.height &&
                 Objects.equals(this.getName(), actor.getName()) &&
-                Objects.equals(this.getSurname(), actor.getSurname());
+                Objects.equals(this.getSurname(), actor.getSurname()) &&
+                Objects.equals(this.getGender(), actor.getGender());
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(height, this.getName(), this.getSurname());
+    public int hashCode()
+    {
+        // Устранение замечания: Лучше включить gender в сравнение и в hashCode()
+        return Objects.hash(height, this.getName(), this.getSurname(), this.getGender());
     }
 }

@@ -12,6 +12,7 @@ public class Theatre {
 
         // Также создайте одного автора музыки и одного хореографа
         MusicAuthor musicAuthor = new MusicAuthor("Матвей", "Тверской", Gender.MALE);
+        // Устранение замечания: Переменная начинается с кириллической буквы с, а не латинской c
         Choreographer choreographer = new Choreographer("Диана", "Цискаридзе", Gender.FEMALE);
 
         // Создать три спектакля: обычный, оперный и балет
