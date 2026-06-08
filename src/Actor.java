@@ -13,8 +13,9 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return "Актер " + getSurname() +
-                " " + getName() +
+        String profession = "Актер ";
+        if (super.getGender() == Gender.FEMALE) profession = "Актриса ";
+        return  profession + super.toString() +
                 " (рост=" + height + ')';
     }
 

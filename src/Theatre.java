@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Theatre {
     public static void main(String[] args) {
         // Создать трёх актеров и двух режиссёров.
@@ -9,16 +7,20 @@ public class Theatre {
         Director director1 = new Director("Виктор", "Виктюк", Gender.MALE, 1000);
         Director director2 = new Director("Роберт", "Пеотровский", Gender.MALE, 400);
 
+        System.out.println(director1 + " количество поставленных спектаклей: " + director1.getNumberOfShows());
+        System.out.println(director2 + " количество поставленных спектаклей: " + director2.getNumberOfShows());
+
         // Также создайте одного автора музыки и одного хореографа
         MusicAuthor musicAuthor = new MusicAuthor("Матвей", "Тверской", Gender.MALE);
-        Choreographer сhoreographer = new Choreographer("Диана", "Цискаридзе", Gender.FEMALE);
+        Choreographer choreographer = new Choreographer("Диана", "Цискаридзе", Gender.FEMALE);
 
         // Создать три спектакля: обычный, оперный и балет
         Show show = new Show("Преступление и наказание", 200, director1);
         Opera opera = new Opera("Евгений Онегин", 180, director2, musicAuthor, "Либретто1", 30);
-        Ballet ballet = new Ballet("Война и мир", 300, director1, musicAuthor, "Либретто2", сhoreographer);
+        Ballet ballet = new Ballet("Война и мир", 300, director1, musicAuthor, "Либретто2", choreographer);
 
-        // Распределить актёров по спектаклям. Используйте для этого метод добавления нового актёра в спектакль.
+        // Распределить актёров по спектаклям.
+        // Используйте для этого метод добавления нового актёра в спектакль.
         // Один актёр может участвовать в нескольких спектаклях.
         System.out.println(show.getTitle());
         show.addNewActorToShow(actor1);
@@ -56,5 +58,8 @@ public class Theatre {
         opera.printLibrettoText();
         System.out.println("Выводим либретто для балета:");
         ballet.printLibrettoText();
+
+        System.out.println(opera.getTitle() + ": " + opera.getMusicAuthor() + ". Хор " + opera.getChoirSize() + " человек");
+        System.out.println(ballet.getTitle() + ": " + ballet.getChoreographer() + ", " + ballet.getMusicAuthor());
     }
 }

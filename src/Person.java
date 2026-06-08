@@ -19,4 +19,11 @@ public class Person {
     public String getSurname() {
         return surname;
     }
+
+    public Gender getGender() { return gender; }
+
+    @Override
+    public String toString() {
+        return name + ' ' + surname;
+    }
 }
