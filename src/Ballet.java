@@ -1,10 +1,8 @@
-import java.util.ArrayList;
-
 /**
  * Балет
  */
 public class Ballet extends MusicalShow {
-    private Choreographer choreographer; // хореограф
+    private final Choreographer choreographer; // хореограф
 
     public Ballet(String title,
                   int duration,
@@ -18,5 +16,9 @@ public class Ballet extends MusicalShow {
                 musicAuthor,
                 librettoText);
         this.choreographer = choreographer;
+    }
+
+    public Choreographer getChoreographer() {
+        return choreographer;
     }
 }

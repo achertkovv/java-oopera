@@ -1,10 +1,8 @@
-import java.util.ArrayList;
-
 /**
  * Музыкальный спектакль
  */
 public class MusicalShow extends Show {
-    private MusicAuthor musicAuthor; // автор музыки
+    private final MusicAuthor musicAuthor; // автор музыки
     private final String librettoText; // текст либретто
 
     public MusicalShow(String title,
@@ -15,6 +13,10 @@ public class MusicalShow extends Show {
         super(title, duration, director);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
+    }
+
+    public MusicAuthor getMusicAuthor() {
+        return musicAuthor;
     }
 
     public void printLibrettoText() {

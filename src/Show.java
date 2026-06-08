@@ -59,6 +59,7 @@ public class Show {
     }
 
     public String getTitle() {
-        return "Спектакль \"" + title + "\"";
+        return "Спектакль \"" + title + "\""
+                + ". Длительность: " + duration + " мин.";
     }
 }
