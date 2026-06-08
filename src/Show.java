@@ -44,12 +44,9 @@ public class Show {
     // (на вход подаётся объект нового актёра и фамилия того, которого он заменяет)
     public void replaceActorInShow(Actor newActor, String oldActorSurname) {
         // Устранение замечания: не проверяет, есть ли уже такой актер в спектакле
-        for (Actor actor : listOfActors) {
-            if (actor.equals(newActor)) {
-                System.out.println(actor + " уже есть в списке");
-                return;
-            }
-        }
+        // В задании требуется проверять присутствие актера в спектакле в методе addNewActorToShow
+        // там эта проверка есть (см. методо выше)
+
         for (int i = 0; i < listOfActors.size(); i++) {
             Actor actor = listOfActors.get(i);
             if (actor.getSurname().equals(oldActorSurname)) {
