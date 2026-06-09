@@ -45,11 +45,15 @@ public class Show {
     public void replaceActorInShow(Actor newActor, String oldActorSurname) {
         // Устранение замечания: не проверяет, есть ли уже такой актер в спектакле
         // В задании требуется проверять присутствие актера в спектакле в методе addNewActorToShow
-        // там эта проверка есть (см. методо выше)
+        // там эта проверка есть (см. метод выше)
 
         for (int i = 0; i < listOfActors.size(); i++) {
             Actor actor = listOfActors.get(i);
             if (actor.getSurname().equals(oldActorSurname)) {
+                if (newActor.equals(actor)) {
+                    System.out.println("Фамилии заменяемого и заменяющего актера \"" + oldActorSurname + "\" совпадают!");
+                    return;
+                }
                 listOfActors.set(i, newActor);
                 return;
             }

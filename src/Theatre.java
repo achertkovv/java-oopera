@@ -25,6 +25,7 @@ public class Theatre {
         // Один актёр может участвовать в нескольких спектаклях.
         System.out.println(show.getTitle());
         show.addNewActorToShow(actor1);
+        show.addNewActorToShow(actor1);
         show.addNewActorToShow(actor2);
         System.out.println(show.getDirector());
 
@@ -49,6 +50,8 @@ public class Theatre {
         System.out.println("Заменяем актера \"Петров\" на \"" + actor1.getSurname() + "\"");
         opera.replaceActorInShow(actor1,"Петров");
         opera.printListOfActors();
+
+        opera.replaceActorInShow(actor1,"Иванов");
 
         // Попробуйте заменить в другом спектакле несуществующего актёра
         System.out.println("Пробуем заменить актера \"Сидоров\" на " + actor2.getSurname() + "\"");
